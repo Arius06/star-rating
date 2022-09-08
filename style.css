@@ -1,0 +1,78 @@
+body {
+    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 90vh;
+    width: 98vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.container > div {
+    margin: 20px;
+}
+.container > .star {
+    margin: 10px;
+}
+
+.dot {
+    background-color: gray;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
+
+.makegold {
+    background-color: gold;
+    transition: .2s;
+}
+
+.star {
+    position: relative;
+    display: block;
+    color: gold;
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-bottom: 17px solid gold;
+    border-left: 20px solid transparent;
+    transform: rotate(35deg);
+    transition: .2s;
+}
+
+.star:before {
+    border-bottom: 14px solid gold;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -7px;
+    left: -15px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+
+.star:after {
+    position: absolute;
+    display: block;
+    color: gold;
+    top: 2px;
+    left: -21px;
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-bottom: 17px solid gold;
+    border-left: 20px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
